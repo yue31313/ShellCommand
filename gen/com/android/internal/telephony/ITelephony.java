@@ -1,6 +1,6 @@
 /*
  * This file is auto-generated.  DO NOT MODIFY.
- * Original file: C:\\Documents and Settings\\Administrator\\桌面\\imiFirewallv1.3\\src\\com\\android\\internal\\telephony\\ITelephony.aidl
+ * Original file: D:\\韩梦飞沙-安卓开发项目\\韩梦飞沙-下载的\\Android开源\\[安卓开源]ImiFirewall\\imiFirewall\\src\\com\\android\\internal\\telephony\\ITelephony.aidl
  */
 package com.android.internal.telephony;
 /* * Copyright (C) 2007 The Android Open Source Project
@@ -39,13 +39,13 @@ public static com.android.internal.telephony.ITelephony asInterface(android.os.I
 if ((obj==null)) {
 return null;
 }
-android.os.IInterface iin = (android.os.IInterface)obj.queryLocalInterface(DESCRIPTOR);
+android.os.IInterface iin = obj.queryLocalInterface(DESCRIPTOR);
 if (((iin!=null)&&(iin instanceof com.android.internal.telephony.ITelephony))) {
 return ((com.android.internal.telephony.ITelephony)iin);
 }
 return new com.android.internal.telephony.ITelephony.Stub.Proxy(obj);
 }
-public android.os.IBinder asBinder()
+@Override public android.os.IBinder asBinder()
 {
 return this;
 }
@@ -114,7 +114,7 @@ Proxy(android.os.IBinder remote)
 {
 mRemote = remote;
 }
-public android.os.IBinder asBinder()
+@Override public android.os.IBinder asBinder()
 {
 return mRemote;
 }
@@ -125,7 +125,7 @@ return DESCRIPTOR;
 /** * End call or go to the Home screen *
 * @return whether it hung up
 */
-public boolean endCall() throws android.os.RemoteException
+@Override public boolean endCall() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -142,7 +142,7 @@ _data.recycle();
 }
 return _result;
 }
-public boolean isIdle() throws android.os.RemoteException
+@Override public boolean isIdle() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -159,7 +159,7 @@ _data.recycle();
 }
 return _result;
 }
-public boolean isOffhook() throws android.os.RemoteException
+@Override public boolean isOffhook() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -176,7 +176,7 @@ _data.recycle();
 }
 return _result;
 }
-public boolean isRisinging() throws android.os.RemoteException
+@Override public boolean isRisinging() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -193,7 +193,7 @@ _data.recycle();
 }
 return _result;
 }
-public void answerRingingCall() throws android.os.RemoteException
+@Override public void answerRingingCall() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -207,7 +207,7 @@ _reply.recycle();
 _data.recycle();
 }
 }
-public void cancelMissedCallsNotification() throws android.os.RemoteException
+@Override public void cancelMissedCallsNotification() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
